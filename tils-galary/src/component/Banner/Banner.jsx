@@ -1,6 +1,7 @@
 import Link from 'next/link';
 import React from 'react';
 import Marquees from '../Marquee/Marquees';
+import 'animate.css';
 
 const Banner = () => {
     return (
@@ -20,6 +21,7 @@ const Banner = () => {
                 <div className="hero-content text-neutral-content text-center">
                     
                     <div className="max-w-md">
+                        <h1 className='mb-10 text-amber-300 text-3xl font-bold animate__animated animate__backInDown'>Welcome to our teils galary !</h1>
                         <Marquees></Marquees>
                         {/* <p className="mb-5">
                             Provident cupiditate voluptatem et in. Quaerat fugiat ut assumenda excepturi exercitationem
