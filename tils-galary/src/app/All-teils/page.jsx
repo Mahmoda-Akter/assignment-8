@@ -1,4 +1,5 @@
 "use client"
+import Footer from '@/component/Footer/Footer';
 import Navber from '@/component/Navbar/Navber';
 import Card from '@/Ui/Card';
 import React, { useEffect, useState } from 'react';
@@ -44,6 +45,7 @@ const allteilspage = () => {
                     }
                 </div>
             </div>
+            <Footer></Footer>
         </div>
     );
 };
