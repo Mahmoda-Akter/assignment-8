@@ -5,28 +5,42 @@ import Card from '@/Ui/Card';
 import React, { useEffect, useState } from 'react';
 
 
-const featchdata = async () => {
+const fetchData = async () => {
+    const res = await fetch('./data.json');
+    const data = await res.json();
+    return data;
+};
+
+// const featchdata = async () => {
 
 
-    const res = await fetch('https://assignment-8-two-inky.vercel.app/data.json')
-    const data = await res.json()
-    return data
+//     const res = await fetch('https://assignment-8-two-inky.vercel.app/data.json')
+//     const data = await res.json()
+//     return data
 
-}
+// }
 
 
 const allteilspage = () => {
     const [filterdata, setfilterdata] = useState([])
     const [search, setsearch] = useState("")
 
-    useEffect(() => {
-        const loaddata = async () => {
-            const finaldata = await featchdata()
-            setfilterdata(finaldata)
+    // const [data, setData] = useState([]);
+    
+        useEffect(() => {
+            fetchData().then((result) => {
+                setfilterdata(result);
+            });
+        }, []);
 
-        }
-        loaddata()
-    }, [])
+    // useEffect(() => {
+    //     const loaddata = async () => {
+    //         const finaldata = await featchdata()
+    //         setfilterdata(finaldata)
+
+    //     }
+    //     loaddata()
+    // }, [])
 
 
     // const filterdatas=finaldata.filter(filteritem=>)

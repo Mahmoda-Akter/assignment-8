@@ -1,17 +1,31 @@
+"use client"
+import { useState, useEffect } from "react";
 import Card from '@/Ui/Card';
 import React from 'react';
 
+const fetchData = async () => {
+    const res = await fetch('./data.json');
+    const data = await res.json();
+    return data;
+};
 
-const featchdata = async () => {
-    const res = await fetch('https://assignment-8-two-inky.vercel.app/data.json')
-    const data = await res.json()
-    return data
+// const featchdata = async () => {
+//     const res = await fetch('https://assignment-8-two-inky.vercel.app/data.json')
+//     const data = await res.json()
+//     return data
 
-}
+// }
 
-const Featured = async () => {
+const Featured = () => {
+    const [data, setData] = useState([]);
+    
+        useEffect(() => {
+            fetchData().then((result) => {
+                setData(result);
+            });
+        }, []);
 
-    const finaldata = await featchdata()
+    const finaldata = data
     const top4 = finaldata.slice(0,4)
     console.log(top4)
     console.log(finaldata.length)
