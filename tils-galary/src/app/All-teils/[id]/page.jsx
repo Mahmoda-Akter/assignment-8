@@ -21,15 +21,16 @@ const detailspage = async ({ params }) => {
     return (
         <div>
             <Navber></Navber>
-            <div className='w-[80%] mx-auto'>
-                <div className="card bg-base-100 w-full shadow-sm">
-                    <figure className='w-full h-[300px]'>
+            <div className='w-[80%] mx-auto mt-15'>
+                <div className="card bg-base-100 w-full shadow-sm sm:flex-col md:flex-row">
+                    <figure className='md:w-1/2 w-full '>
                         <img
                             src={finditem.image}
                             alt={finditem.title} />
                     </figure>
-                    <div className="card-body">
+                    <div className="card-body w-1/2 w-full">
                         <h2 className="card-title">{finditem.title}</h2>
+                        <h2 className="card-title italic text-amber-500">{finditem.category}</h2>
                         <p>"{finditem.description}</p>
 
                     </div>
