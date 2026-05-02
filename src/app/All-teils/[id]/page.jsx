@@ -3,7 +3,7 @@ import React from 'react';
 
 
 const featchdata = async () => {
-    const res = await fetch('http://localhost:3000/data.json')
+    const res = await fetch('https://assignment-8-two-inky.vercel.app/data.json')
     const data = await res.json()
     return data
 
