@@ -22,7 +22,7 @@ const Navber = () => {
                             className="menu menu-sm dropdown-content bg-base-100 rounded-box z-1 mt-3 w-52 p-2 shadow">
                             <li><Mylink href={"/"}>Home</Mylink></li>
                             <li><Mylink href={"/All-teils"}>All Tiles</Mylink></li>
-                            <li><Mylink href={""}>My Profile</Mylink></li>
+                            <li><Mylink href={"/profile"}>My Profile</Mylink></li>
 
                         </ul>
                     </div>
@@ -32,7 +32,7 @@ const Navber = () => {
                     <ul className="menu menu-horizontal px-1">
                         <li><Mylink href={"/"} className="text-amber-500">Home</Mylink></li>
                         <li><Mylink href={"/All-teils"}>All Tiles</Mylink></li>
-                        <li><Mylink href={"/All-teils"}>My Profile</Mylink></li>
+                        <li><Mylink href={"/profile"}>My Profile</Mylink></li>
                     </ul>
                 </div>
                 {
