@@ -35,13 +35,21 @@ const Navber = () => {
                         <li><Mylink href={"/profile"}>My Profile</Mylink></li>
                     </ul>
                 </div>
-                {
-                    user? (<div className="navbar-end gap-2">
-                    <h2 className='hidden sm:block'>{user.name}</h2>
-                    <img src={user.image} className='w-[30px] h-[30px] rounded-full'/>
-                    <button className='btn btn-primary'onClick={async()=> await authClient.signOut()}>Logout</button>
-                </div>):(<Link href={"/sing-up"} className='btn btn-primary navbar-end'>Login</Link>)
-                }
+                
+                <div className="navbar-end gap-2">
+                    {
+                        user? 
+                            (<>
+                            <h2 className='hidden sm:block'>{user.name}</h2>
+                            <img src={user.image} className='w-[30px] h-[30px] rounded-full'/>
+                            <button className='btn btn-primary'onClick={async()=> await authClient.signOut()}>Logout</button>
+                            </>
+                            )
+
+                            :(<button className='btn btn-primary'><Link href={"/sing-up"} >Login</Link></button>)
+                    }
+                </div>
+                
                 
             </div>
         </div>
