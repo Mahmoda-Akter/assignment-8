@@ -47,12 +47,13 @@ const Singuppage = () => {
                     <Link href={"/Register"} >if your are register then/<span className='text-blue-500 text-xl'>register</span></Link>
 
                 </fieldset>
+                <div className='flex justify-center items-center bg-slate-100 mt-7'>
+                    <img src='https://yt3.googleusercontent.com/bAseQlKvNmjdLQrvYWm_q3QDp8C8YKyYI-nYJewgOkPi0JU1_3X9oFgjrEdzkOlXzLGFxFbnsw=s900-c-k-c0x00ffffff-no-rj' className='w-[30px] h-[30px]' />
+                    <button onClick={handlegoogle} className='text-center text-2xl'>sing in with google</button>
+                </div>
 
             </form>
-            <div className='flex justify-center items-center bg-slate-100 mt-7'>
-                <img src='https://yt3.googleusercontent.com/bAseQlKvNmjdLQrvYWm_q3QDp8C8YKyYI-nYJewgOkPi0JU1_3X9oFgjrEdzkOlXzLGFxFbnsw=s900-c-k-c0x00ffffff-no-rj' className='w-[30px] h-[30px]' />
-                <button onClick={handlegoogle} className='text-center text-2xl'>sing in with google</button>
-            </div>
+
 
         </div>
     );
