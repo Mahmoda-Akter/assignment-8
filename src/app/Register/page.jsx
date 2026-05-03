@@ -60,12 +60,13 @@ const Registrpage = () => {
 
                     <button className="btn btn-neutral mt-4">sing-in</button>
                     <Link href={"/sing-up"} >if your not logd in then/<span className='text-blue-500 text-xl'>login</span></Link>
-                    <div className='flex justify-center items-center bg-slate-100 mt-3'>
-                        <img src='https://yt3.googleusercontent.com/bAseQlKvNmjdLQrvYWm_q3QDp8C8YKyYI-nYJewgOkPi0JU1_3X9oFgjrEdzkOlXzLGFxFbnsw=s900-c-k-c0x00ffffff-no-rj' className='w-[30px] h-[30px]' />
-                        <button onClick={handleregestergoogle} className='text-center text-2xl'>sing up with google</button>
-                    </div>
+
                 </fieldset>
             </form>
+            <div className='flex justify-center items-center bg-slate-100 mt-3'>
+                <img src='https://yt3.googleusercontent.com/bAseQlKvNmjdLQrvYWm_q3QDp8C8YKyYI-nYJewgOkPi0JU1_3X9oFgjrEdzkOlXzLGFxFbnsw=s900-c-k-c0x00ffffff-no-rj' className='w-[30px] h-[30px]' />
+                <button onClick={handleregestergoogle} className='text-center text-2xl'>sing up with google</button>
+            </div>
         </div>
     );
 };

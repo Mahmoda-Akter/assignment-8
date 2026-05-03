@@ -21,7 +21,7 @@ const Singuppage = () => {
         console.log(res, error)
     }
 
-    const handlegoogle =async () => {
+    const handlegoogle = async () => {
         const data = await authClient.signIn.social({
             provider: "google",
         });
@@ -45,13 +45,14 @@ const Singuppage = () => {
 
                     <button className="btn btn-neutral mt-4">Login</button>
                     <Link href={"/Register"} >if your are register then/<span className='text-blue-500 text-xl'>register</span></Link>
-                    <div className='flex justify-center items-center bg-slate-100 mt-7'>
-                        <img src='https://yt3.googleusercontent.com/bAseQlKvNmjdLQrvYWm_q3QDp8C8YKyYI-nYJewgOkPi0JU1_3X9oFgjrEdzkOlXzLGFxFbnsw=s900-c-k-c0x00ffffff-no-rj' className='w-[30px] h-[30px]' />
-                        <button onClick={handlegoogle} className='text-center text-2xl'>sing in with google</button>
-                    </div>
+
                 </fieldset>
 
             </form>
+            <div className='flex justify-center items-center bg-slate-100 mt-7'>
+                <img src='https://yt3.googleusercontent.com/bAseQlKvNmjdLQrvYWm_q3QDp8C8YKyYI-nYJewgOkPi0JU1_3X9oFgjrEdzkOlXzLGFxFbnsw=s900-c-k-c0x00ffffff-no-rj' className='w-[30px] h-[30px]' />
+                <button onClick={handlegoogle} className='text-center text-2xl'>sing in with google</button>
+            </div>
 
         </div>
     );
