@@ -30,7 +30,7 @@ const Registrpage = () => {
         }
         if (res) {
             toast.success("successfully sing-in");
-            router.push("/")
+            router.push("/sing-up")
             
         }
     }
