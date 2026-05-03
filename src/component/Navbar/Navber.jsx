@@ -5,9 +5,14 @@ import Mylink from '../mynavlink/Mylink';
 import { authClient } from '@/lib/auth-client';
 
 const Navber = () => {
+    const handleSignOut = async () => {
+        await authClient.signOut();
+        router.push("/sign-up");
+        window.location.reload();
+    };
 
     const { data: session } = authClient.useSession()
-    const user=session?.user
+    const user = session?.user
     console.log(user)
     return (
         <div >
@@ -35,25 +40,26 @@ const Navber = () => {
                         <li><Mylink href={"/profile"}>My Profile</Mylink></li>
                     </ul>
                 </div>
-                
+
                 <div className="navbar-end gap-2">
                     {
-                        user? 
+                        user ?
                             (<>
-                            <h2 className='hidden sm:block'>{user.name}</h2>
-                            <img src={user.image} className='w-[30px] h-[30px] rounded-full'/>
-                            <button className='btn btn-primary'onClick={async()=> await authClient.signOut()}>Logout</button>
+                                <h2 className='hidden sm:block'>{user.name}</h2>
+                                <img src={user.image} className='w-[30px] h-[30px] rounded-full' />
+                                <button className='btn btn-primary' onClick={handleSignOut}>Logout</button>
                             </>
                             )
 
-                            :(<button className='btn btn-primary'><Link href={"/sing-up"} >Login</Link></button>)
+                            : (<button className='btn btn-primary'><Link href={"/sing-up"} >Login</Link></button>)
                     }
                 </div>
-                
-                
+
+
             </div>
         </div>
     );
 };
 
 export default Navber;
+// {async () => await authClient.signOut()
