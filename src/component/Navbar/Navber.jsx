@@ -40,7 +40,7 @@ const Navber = () => {
                     <h2 className='hidden sm:block'>{user.name}</h2>
                     <img src={user.image} className='w-[30px] h-[30px] rounded-full'/>
                     <button className='btn btn-primary'onClick={async()=> await authClient.signOut()}>Logout</button>
-                </div>):(<Link href={"/sing-up"} className='btn btn-primary'>Login</Link>)
+                </div>):(<Link href={"/sing-up"} className='btn btn-primary navbar-end'>Login</Link>)
                 }
                 
             </div>
