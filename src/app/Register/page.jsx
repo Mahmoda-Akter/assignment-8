@@ -59,7 +59,7 @@ const Registrpage = () => {
                     {errors.password && <p className='text-red-500'>{errors.password.message}</p>}
 
                     <button className="btn btn-neutral mt-4">sing-in</button>
-                    <Link href={"/sing-up"} >if your not logd in then/<span className='text-blue-500 text-xl'>login</span></Link>
+                    <Link href={"/sing-up"} >if your register then/<span className='text-blue-500 text-xl'>login</span></Link>
 
                 </fieldset>
                 <div className='flex justify-center items-center bg-slate-100 mt-3'>

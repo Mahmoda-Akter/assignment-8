@@ -44,7 +44,7 @@ const Singuppage = () => {
                     {errors.password && <p className='text-red-500'>{errors.password.message}</p>}
 
                     <button className="btn btn-neutral mt-4">Login</button>
-                    <Link href={"/Register"} >if your are register then/<span className='text-blue-500 text-xl'>register</span></Link>
+                    <Link href={"/Register"} >if your are not logdin then/<span className='text-blue-500 text-xl'>register</span></Link>
 
                 </fieldset>
                 <div className='flex justify-center items-center bg-slate-100 mt-7'>
