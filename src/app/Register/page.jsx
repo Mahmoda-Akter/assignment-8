@@ -1,12 +1,15 @@
 "use client"
 import { authClient } from '@/lib/auth-client';
+
 import Link from 'next/link';
+import { useRouter } from 'next/navigation';
 import React from 'react';
 import { useForm } from 'react-hook-form';
 import { toast } from 'react-toastify';
 
 const Registrpage = () => {
     const { register, handleSubmit, formState: { errors } } = useForm()
+    const router=useRouter()
 
     const handelregisterfunction = async (data) => {
         const { email, name, password, photo } = data
@@ -27,6 +30,7 @@ const Registrpage = () => {
         }
         if (res) {
             toast.success("successfully sing-in");
+            router.push("/")
             
         }
     }
