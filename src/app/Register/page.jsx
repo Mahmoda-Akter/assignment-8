@@ -3,6 +3,7 @@ import { authClient } from '@/lib/auth-client';
 import Link from 'next/link';
 import React from 'react';
 import { useForm } from 'react-hook-form';
+import { toast } from 'react-toastify';
 
 const Registrpage = () => {
     const { register, handleSubmit, formState: { errors } } = useForm()
@@ -21,10 +22,12 @@ const Registrpage = () => {
         });
         console.log(res, error)
         if (error) {
-            alert(error.message)
+            
+            toast.error(error.message);
         }
         if (res) {
-            alert("successfully sing-in")
+            toast.success("successfully sing-in");
+            
         }
     }
 

@@ -3,6 +3,7 @@ import { authClient } from '@/lib/auth-client';
 import Link from 'next/link';
 import React from 'react';
 import { useForm } from 'react-hook-form';
+import { toast } from 'react-toastify';
 
 const Singuppage = () => {
 
@@ -19,6 +20,14 @@ const Singuppage = () => {
             callbackURL: "/",
         });
         console.log(res, error)
+        if (error) {
+
+            toast.error(error.message);
+        }
+        if (res) {
+            toast.success("successfully login");
+
+        }
     }
 
     const handlegoogle = async () => {
