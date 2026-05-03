@@ -21,7 +21,7 @@ const Registrpage = () => {
             email: email, // required
             password: password, // required
             image: photo,
-            callbackURL: "/",
+            callbackURL: "/sing-up",
         });
         console.log(res, error)
         if (error) {

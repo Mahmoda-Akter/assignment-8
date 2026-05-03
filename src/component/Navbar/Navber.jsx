@@ -3,12 +3,15 @@ import Link from 'next/link';
 import React from 'react';
 import Mylink from '../mynavlink/Mylink';
 import { authClient } from '@/lib/auth-client';
+import { useRouter } from "next/navigation";
 
 const Navber = () => {
+    const navigate = useRouter()
     const handleSignOut = async () => {
         await authClient.signOut();
-        router.push("/sign-up");
-        window.location.reload();
+        navigate.push("/");
+        navigate.refresh()
+        // window.location.reload();
     };
 
     const { data: session } = authClient.useSession()
